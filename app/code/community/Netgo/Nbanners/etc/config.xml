@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!--
+/***************************************
+ *** Complete RWD Slider ***
+ ***************************************
+ *
+ * @category    Netgo
+ * @package     Netgo_Stripe
+ * @author      Afroz Alam <afroz92@gmail.com>
+ * @copyright   NetAttingo Technologies (http://www.netattingo.com/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ *
+ */
+-->
+<config>
+  <modules>
+    <Netgo_Nbanners>
+      <version>1.0.0</version>
+    </Netgo_Nbanners>
+  </modules>
+  <frontend>
+    <routers>
+      <nbanners>
+        <use>standard</use>
+          <args>
+            <module>Netgo_Nbanners</module>
+            <frontName>nbanners</frontName>
+          </args>
+      </nbanners>
+    </routers>
+		<layout>
+		  <updates>
+			<nbanners>
+			  <file>nbanners.xml</file>
+			</nbanners>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+    <helpers>
+      <nbanners>
+        <class>Netgo_Nbanners_Helper</class>
+      </nbanners>
+    </helpers>
+	<blocks>
+	  <nbanners>
+		<class>Netgo_Nbanners_Block</class>
+	  </nbanners>
+	</blocks>
+	<models>
+	  <nbanners>
+		<class>Netgo_Nbanners_Model</class>
+		<resourceModel>nbanners_mysql4</resourceModel>
+	  </nbanners>
+	  <nbanners_mysql4>
+		<class>Netgo_Nbanners_Model_Mysql4</class>
+		<entities>		  
+			  <nbanners>
+				<table>nbanners</table>
+			  </nbanners>
+        </entities>
+	  </nbanners_mysql4>
+	</models>
+	<resources>
+	  <nbanners_setup>
+		<setup>
+		  <module>Netgo_Nbanners</module>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </nbanners_setup>
+	  <nbanners_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </nbanners_write>
+	  <nbanners_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </nbanners_read>
+	</resources>
+  </global>
+  <admin>
+	<routers>
+	  <nbanners>
+	    <use>admin</use>
+		<args>
+		  <module>Netgo_Nbanners</module>
+		  <frontName>admin_nbanners</frontName>
+		</args>
+	  </nbanners>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <nbanners module="nbanners">
+		<title>Nbanners</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <nbanners module="nbanners">
+		    <title>Manage Nbanners</title>
+			<sort_order>0</sort_order>
+			<action>admin_nbanners/adminhtml_nbanners</action>
+		  </nbanners>
+		</children>
+	  </nbanners>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<nbanners translate="title" module="nbanners">
+			  <title>Nbanners</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <nbanners translate="title">
+			<title>Manage Nbanners</title>
+			<sort_order>0</sort_order>
+		  </nbanners>
+			  </children>
+			</nbanners>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<nbanners>
+		  <file>nbanners.xml</file>
+		</nbanners>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 

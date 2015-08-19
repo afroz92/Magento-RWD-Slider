@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+/***************************************
+ *** Complete RWD Slider ***
+ ***************************************
+ *
+ * @category    Netgo
+ * @package     Netgo_Stripe
+ * @author      Afroz Alam <afroz92@gmail.com>
+ * @copyright   NetAttingo Technologies (http://www.netattingo.com/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ *
+ */
+-->
+<config>
+	  <tabs>
+		<netgo translate="label" module="nbanners">
+            <label>Netgo</label>
+            <sort_order>0</sort_order>
+        </netgo>
+	  </tabs>
+	  <sections>
+		<netgo_nbanners  translate="label" module="nbanners">                    
+		<label>Netgo Banners</label>
+		<tab>netgo</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>0</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+				      <netgo_nbanners_group translate="label"> 
+					  <label>Netgo Banners</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>0</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <!--<fields>
+                          <status translate="label">
+                            <label>Enable/Disable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </status>
+					   </fields>
+					   
+					   	<fields>
+                          <enablejquery translate="label">
+                            <label>Enable JQuery</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </enablejquery>
+					   </fields>-->
+					   
+					   <fields>
+                          <pagination translate="label">
+                            <label>Show Pagination</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </pagination>
+					   </fields>
+						<fields>
+                          <effect translate="label">
+                            <label>Effect</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>Netgo_Nbanners_Model_Adminhtml_System_Config_Source_Effects</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </effect>
+					   </fields>
+						<!--<fields>
+                          <pauseonhover translate="label">
+                            <label>Pause on hover</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </pauseonhover>
+					   </fields>-->
+						<fields>
+                          <speed translate="label">
+                            <label>Speed (in ms eg. 1000)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </speed>
+					   </fields>
+					   </netgo_nbanners_group>
+					</groups>
+		</netgo_nbanners>
+	  </sections>
+</config>
