@@ -3,7 +3,7 @@
  ***************************************
  *
  * @category    Netgo
- * @package     Netgo_Stripe
+ * @package     Netgo_Nbanners
  * @author      Afroz Alam <afroz92@gmail.com>
  * @copyright   NetAttingo Technologies (http://www.netattingo.com/)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
